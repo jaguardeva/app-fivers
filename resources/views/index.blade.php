@@ -9,7 +9,7 @@
 
             <div class="w-full h-full grid md:grid-cols-2">
                 <div class="w-full flex flex-col justify-center">
-                    <h1 class="text-7xl font-bold">Find the right <span class="text-blue-500">digital</span> service,
+                    <h1 class="text-7xl font-bold">Find the right <span class="text-blue-600">digital</span> service,
                         right away</h1>
 
                     <form class="w-full mx-auto mt-10">

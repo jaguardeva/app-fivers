@@ -13,6 +13,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/myorders', [Controllers\MyorderController::class, 'index'])->name('myorders')->middleware('auth');
+
+Route::get('/myorders/notpaid', function () {
+    return view('myOrder.notpaid');
+})->name('myorders.notpaid')->middleware('auth');
+
+Route::get('/myorders/onprocess', fn() => view('myOrder.process'))->name('myorders.onprocess')->middleware('auth');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [Controllers\ProfileController::class, 'update'])->name('profile.update');

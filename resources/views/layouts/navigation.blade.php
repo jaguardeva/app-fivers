@@ -6,8 +6,10 @@
                 <!-- Logo -->
                 @auth
                     <div class="shrink-0 flex items-center">
-                        <a href="{{ route('dashboard') }}">
-                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <a href="{{ route('dashboard') }}" class="flex">
+                            <h1 class="font-bold text-4xl">Fiver<span class="text-blue-600">s</span></h1>
+                            <div class="h-2 w-2 rounded-full bg-blue-500">
+                            </div>
                         </a>
                     </div>
                 @else
@@ -53,6 +55,9 @@
                         <x-slot name="content">
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('myorders')">
+                                {{ __('My Order') }}
                             </x-dropdown-link>
 
                             <!-- Authentication -->
@@ -115,7 +120,9 @@
                     <x-responsive-nav-link :href="route('profile.edit')">
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
-
+                    <x-responsive-nav-link :href="route('myorders')">
+                        {{ __('My Order') }}
+                    </x-responsive-nav-link>
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
