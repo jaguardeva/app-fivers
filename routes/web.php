@@ -16,6 +16,8 @@ Route::get('/dashboard', function () {
 Route::get('/services', [Controllers\ServiceController::class, 'index'])->name('services')->middleware('auth');
 Route::get('/services/details', [Controllers\ServiceController::class, 'show'])->name('services.details')->middleware('auth');
 
+Route::get('/checkout', [Controllers\CheckoutController::class, 'index'])->name('checkout')->middleware('auth');
+
 Route::get('/myorders', [Controllers\MyorderController::class, 'index'])->name('myorders')->middleware('auth');
 
 Route::get('/myorders/notpaid', function () {

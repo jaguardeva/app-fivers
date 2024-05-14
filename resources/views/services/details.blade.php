@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="md:flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Services') }}
+                {{ __('Detail Service') }}
             </h2>
             <form class="w-full max-w-xl">
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
@@ -285,10 +285,10 @@
                                         <p class="font-medium text-sm">3 Revisions</p>
                                     </div>
                                 </div>
-                                <button
+                                <a href="{{ route('checkout') }}"
                                     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 mt-6 rounded-md w-full flex gap-5 items-center justify-center">
                                     <span>Continue</span><i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
