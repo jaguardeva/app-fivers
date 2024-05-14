@@ -1,34 +1,24 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 sticky top-0 z-50">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                @auth
-                    <div class="shrink-0 flex items-center">
-                        <a href="{{ route('dashboard') }}" class="flex">
-                            <h1 class="font-bold text-4xl">Fiver<span class="text-blue-600">s</span></h1>
-                            <div class="h-2 w-2 rounded-full bg-blue-500">
-                            </div>
-                        </a>
-                    </div>
-                @else
-                    <div class="shrink-0 flex items-center">
-                        <a href="{{ route('home') }}" class="flex">
-                            <h1 class="font-bold text-4xl">Fiver<span class="text-blue-600">s</span></h1>
-                            <div class="h-2 w-2 rounded-full bg-blue-500">
-                            </div>
-                        </a>
-                    </div>
-                @endauth
+
+                <div class="shrink-0 flex items-center">
+                    <a href="{{ route('home') }}" class="flex">
+                        <h1 class="font-bold text-4xl">Fiver<span class="text-blue-600">s</span></h1>
+                        <div class="h-2 w-2 rounded-full bg-blue-500">
+                        </div>
+                    </a>
+                </div>
+
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    @auth
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-nav-link>
-                    @endauth
+                    <x-nav-link :href="route('services')" :active="request()->routeIs('services')">
+                        {{ __('Services') }}
+                    </x-nav-link>
                 </div>
             </div>
 

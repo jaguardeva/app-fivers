@@ -8,11 +8,12 @@
 
     <style>
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
             background-color: gray;
+            cursor: pointer;
         }
     </style>
 
